@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  base-service:
+    build: .
+    image: baseservice
+    volumes:
+        - .:/data
+
+  api:
+    extends: base-service
+    expose:
+      - "5001"
+    ports:
+      - 0.0.0.0:5001:5001

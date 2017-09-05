@@ -1,0 +1,42 @@
+app:
+  app:
+    debug: true
+  db:
+    postgres:
+      url: postgresql://postgres:postgres@localhost:5432/db
+      echo: false
+      secret_key: "change me"
+  logging_config:
+    version: 1
+    disable_existing_loggers: False
+    formatters:
+      long_format:
+        format: '[%(levelname)s:%(asctime)s:%(levelno)s] %(name)s.%(funcName)s:%(lineno)d %(module)s %(pathname)s %(process)s %(processName)s %(thread)s %(threadName)s %(exc_info)s %(message)s'
+      simple_format:
+        format: '[%(asctime)s] %(message)s'
+    handlers:
+      console_long:
+        class: logging.StreamHandler
+        level: DEBUG
+        formatter: long_format
+        stream: ext://sys.stdout
+      console_simple:
+        class: logging.StreamHandler
+        level: DEBUG
+        formatter: simple_format
+        stream: ext://sys.stdout
+      noid:
+        class: logging.NullHandler
+    loggers:
+      requests:
+        level: NOTSET
+        handlers: [noid]
+        propagate: no
+      app.app:
+        level: INFO
+        handlers: [console_simple]
+        propagate: no
+    root:
+      level: NOTSET
+      handlers:
+        - console_simple

@@ -1,0 +1,7 @@
+flask==0.12.2
+flask-apispec==0.4.0
+gunicorn==19.7.0
+marshmallow==3.0.0b3
+psycopg2==2.7.3
+sqlalchemy==1.1.13
+yamlsettings==0.2.4
