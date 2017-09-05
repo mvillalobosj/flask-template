@@ -7,6 +7,7 @@ Flask Template is designed to get you up and running with a Python Flask API wit
 * [marshmallow](https://github.com/marshmallow-code/marshmallow) - Used for serialization/deserialization of request/response data.
 * [sqlalchemy](https://github.com/zzzeek/sqlalchemy) - SQL ORM for querying a DB and managing DB connections.
 * [yamlsettings](https://github.com/KyleJamesWalker/yamlsettings) - Configuration management 
+* [yoyo-migrations](https://pypi.python.org/pypi/yoyo-migrations) - DB Migration Script management.
 * [gunicorn](https://github.com/benoitc/gunicorn) - Python HTTP Server for managing multiple connections.
 * [docker](https://docs.docker.com/) - Container service for abstracting deployment environment.
 * [docker-compose](https://docs.docker.com/compose/) - Docker management service.
